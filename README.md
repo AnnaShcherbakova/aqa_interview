@@ -1,7 +1,7 @@
 #Programming
 
 1. Create test plan for functional testing of [Google Translate](http://translate.google.ru) web-service. (3-5 scenarions are quite enough)
-2. Create mini-framework which meets the requirements of test plan. Technologies: Ruby + Cucumber + Capybara/Selenium/Watir/PageObject/SitePrism (any mix)
+2. Create mini-framework which meets the requirements of test plan. Technologies: Ruby + Cucumber + Capybara/Selenium/watir-webdriver/PageObject/SitePrism (any mix)
 3. Implement the scripts from test plan using the framework
 
 Quick start:
