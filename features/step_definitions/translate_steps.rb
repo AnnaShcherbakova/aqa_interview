@@ -15,12 +15,17 @@ Given /^Auto translation is '(.*)'$/ do |autotrans|
   end
 end
 
-Given /^I need to translate word '(.*)'$/ do |source_word|
+Given /^I need to translate '(.*)'$/ do |source_word|
   @gt.SetTranslation(source_word)
 end
 
 When /^I do nothing$/ do
   sleep(5)
+end
+
+When /^I click button 'Translate'$/ do
+  sleep(5)
+  @gt.TranslateClick
 end
 
 Then /^I should see '(.*)'$/ do |exp_result|

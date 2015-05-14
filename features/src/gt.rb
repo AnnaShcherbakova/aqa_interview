@@ -11,7 +11,8 @@ class GoogleTranslate
   def OpenBrowse
 #    let (:browser) {@browser ||= Selenium:WebDriver.for :ff
     @driver = Selenium::WebDriver.for :ff
-    @driver.get 'https://translate.google.ru/'
+    #@driver.get 'https://translate.google.ru/'
+    @driver.get 'https://translate.google.ru/?hl=ru&tab=wT#en/ru/'
 
     @stxt_el = @driver.find_element :id => 'source'#source text
     @trans_button = @driver.find_element :id => "gt-submit" #button translate
@@ -33,7 +34,6 @@ class GoogleTranslate
   def TranslateClick
     #trans_button = @driver.find_element :id => "gt-submit"
     @trans_button.click
-    puts @trans_button.attribute(:value)
   end
 
   def OffAutoTrans
@@ -41,7 +41,6 @@ class GoogleTranslate
 
     if (@offAutoTrans_button.attribute(:text).length == 30) #30 - string lenght "Off Auto Trans" in Russian
        @offAutoTrans_button.click
-       puts "clicked"
     end
   end
 
