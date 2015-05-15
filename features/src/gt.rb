@@ -1,9 +1,5 @@
 # encoding: Windows-1251
 require 'selenium/webdriver'
-require 'rspec/autorun'
-
-include RSpec
-
 
 class GoogleTranslate
   attr_accessor :result_tr
@@ -15,7 +11,7 @@ class GoogleTranslate
     @driver.get 'https://translate.google.ru/?hl=ru&tab=wT#en/ru/'
 
     @stxt_el = @driver.find_element :id => 'source'#source text
-    @trans_button = @driver.find_element :id => "gt-submit" #button translate
+    @trans_button = @driver.find_element :id => 'gt-submit' #button translate
     
     @rtxt_el = @driver.find_element :id => 'result_box'
   end
@@ -32,7 +28,7 @@ class GoogleTranslate
   end
 
   def TranslateClick
-    #trans_button = @driver.find_element :id => "gt-submit"
+    @trans_button = @driver.find_element :id => 'gt-submit'
     @trans_button.click
   end
 

@@ -20,12 +20,13 @@ Given /^I need to translate '(.*)'$/ do |source_word|
 end
 
 When /^I do nothing$/ do
-  sleep(5)
+  sleep(7)
 end
 
 When /^I click button 'Translate'$/ do
   sleep(5)
   @gt.TranslateClick
+  sleep(5)
 end
 
 Then /^I should see '(.*)'$/ do |exp_result|
